@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <title>Keyboard Archive</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+      body {
+        margin: 0px;
+        font-family: Arial;
+        background: black;
+      }
+
+
+      .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+
+      .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+
+
+
+        video {
+            position: relative;
+            min-width: 100vw;
+            min-height: 100vh;
+            object-fit: contain;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+        }
+        .imageContainer > img:hover {
+  width: 500px;
+  height: 200px;
+}
+
+
+      .content {
+        position: relative;
+        text-align: center;
+        font-family: monospace;
+        font-size: 25px;
+        bottom: 0px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 23px;
+
+      }
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #ddd;
+        color: black;
+      }
+      #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #topBtn:hover {
+        background-color: #555;
+      }
+
+      .overlay h1 {
+        color: #fff;
+        font-family: monospace;
+        font-size: 80px;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .15em;
+        animation:
+          typing 2.5s steps(25, end),
+          blink-caret .5s step-end infinite;
+      }
+
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 55% }
+      }
+
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange }
+      }
+
+
+      @media screen and (max-width: 800px) {
+        .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+
+      @media screen and (max-width: 600px) {
+        .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <header>
+    <video src="typing2.mp4" autoplay loop muted id="myVideo"></video>
+    <div class="overlay">
+        <h1>Mechanical Keyboard Archive</h1>
+
+    </div>
+    </header>
+      <button onclick="topFunction()" id="topBtn" title="Go to top">Back to Top</button>
+
+
+        <div class="content">
+          <p>With the Mechanical Keyboard hobby becoming more popular, there are many new and unique builds coming to light. I feel some of those amazing builds should be highlighted and on display for other to see. Here are some of those captivating boards by fellow enthusiasts.
+
+          </p>
+          <button id="myBtn" autofocus="true" onclick="myFunction()">Pause</button>
+        </div>
+
+        <script>
+          var video = document.getElementById("myVideo");
+          var btn = document.getElementById("myBtn");
+
+          function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+          }
+
+          var mybutton = document.getElementById("topBtn");
+
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+
+
+
+      <div class="imageContainer">
+      <div class="row">
+        <div class="column">
+          <img src="https://dl.airtable.com/.attachments/2b4f31efe5efce865b25d3185f5f7890/f432a6d4/mech1.jpg" style="width:100%">
+          <img src="https://dl.airtable.com/.attachments/bf5260679daee833823bd230a2a6e232/1b9284ef/mech2.jpg" style="width:100%">
+          <img src="https://dl.airtable.com/.attachments/85dd59485b3e7e1fe5c1034beb89b536/2caf53fd/mech3.jpg" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/f35c2ae7f363cd8798307e529d32bb88/9ec2fcee" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/d30091c237f971dc40c278e4bc603bc7/461d70f1" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/bebd02003b734531adad7aaa6f47e9b7/7b3a0bd6" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/c372bf7122054344ba6574693d3b9866/2c10d324" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/be7c0e27fe4fc27e9c4c3389767f543c/304bf725" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/f1fee785adc7fc8bb19aa7255d3fc0c0/68d046f7" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/73d8b892845a1d88be4f2f5e687014e4/33dd1102" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/9aeddc6df26c4516faa0131ca6b55ab7/acf3ef99" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/af9014d112efa287e2bdfa303d9d4aaa/bbbcb052" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/29c848d5f6963ff7db9c3d114ed6b908/304baac7" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/8a0c0ee21c7831bdfafa5cbfd19c2e30/0915134e" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/846af0bfbfcc32468050adcd0811021d/a7af2b07" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/aefa67b3c8794c79cdee87d61ddd406a/6ae04aed" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/c4cc2e9920c7c1f7b1357c704f74cb57/ab5f1755" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/1cfe20a36866f8116eb46184477677f6/90eb42ed" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/adddf1ed58c15cc243973218b06e55f3/b52b4d98" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/b7f2ea66706748ab4f56b32c55af075f/32deff75" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/46cd67905f1168258974c9ae18671b51/9f84f56c" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/f8898dc462894405a97fa799898a83a4/8838fad2" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/e2d720da7cb95ba70093ea4a4675aca9/f3285393" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/56327522819b166a9568956db7cc5caf/2b850f2f" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/1316914916752f671d7d8ae229668fa4/419a3f72" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/3a24c87afe73fd65811ac1b742bce319/1cf41458" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/75e83e31762cbe188a28714a21629aa2/a7426055" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/a833e1020137127fef4564169b1a9b2c/8b90783b" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/0b9d9e3d238daca183a15d916b16e85a/64077a87" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/944017f2db9bcb2e168908f39ca1d4de/2f6a975d" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/d238eb1063e4768733f7234b36c57c86/f9298612" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/9d4de405f022d25fef8ff706ad21245a/446228ae" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/846078b86ba052ce980f51d958746165/860df67e" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/2986f3536c7cebf9d22b3f21a9b4c340/6cb5d23c" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/795470311a712c2da4e35deba5df4ffd/fae64799" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/39237d5b0c4b6610b3c29ce34d42fe27/a89e3418" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/26c7aff07fec2fdc9469f060425a0a2d/e4ca31cc" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/def3a29e0097972034383650c5252c56/ce4e3593" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/10903dfcda2fcbcd40cdcf71c00417bd/a0c52f87" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/7a4b0665827c26a18751f9726ef2f78a/4a14a1cb" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/0ce457005148d19cb48b8b7101d1379c/3f6583bf" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/0c1b7fccdc042b8b583dd58c21d3e7b3/550bd9b7" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/bc1cce9e6eb1b85830bb044eae725965/360a5c40" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/952c6e5235e7f7eaee876b3cf53976b6/8b86a4e5" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/d6ec5ed4426b423e20ac55ecb7f6d824/7f26498d" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/7345026bdbac0edd90586353e668895d/9439a63f" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/ad045f589ee8de578776e0f93ece1cab/ad6325f1" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/6d1028ed6b5554764a11f0c207e6bdee/8f63555f" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/f54cf5def997d00b2a3b4a8864a48c49/f98f0e92" style="width:100%">
+          <img src="https://dl.airtable.com/.attachmentThumbnails/765f06804a7ca0e942211eb2130d07f8/d02ae91e" style="width:100%">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+  </body>
+</html>
