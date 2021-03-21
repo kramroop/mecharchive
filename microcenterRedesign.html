@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Micro Center Redesign</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+    <style>
+    .container{
+      display:grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr .2fr .5fr 1.4fr 1.4fr .2fr;
+      grid-template-areas:
+        "head head head head head"
+        "nav nav nav nav nav"
+        "main main main main main"
+        "content1 content2 content3 content4 content5"
+        "content6 content7 content8 content9 content10"
+        "footer footer footer footer footer";
+      /* grid-gap: 0.1rem; */
+
+    }
+
+
+      #head{
+        background: linear-gradient(270deg, #ff0000, #0100ff, #11ff00, #e7ff00, #b500ff, #ff00cd, #ffa600, #00ebff);
+         background-size: 1600% 1600%;
+
+         -webkit-animation: background 30s ease infinite;
+         -moz-animation: background 30s ease infinite;
+         animation: background 30s ease infinite;
+
+        grid-area: head;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         padding-left: 50px;
+      }
+      @-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+    }
+    @-moz-keyframes background {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes background {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @font-face {
+      font-family: horizon;
+      src: url(font/Horizon.ttf.woff);
+    }
+      nav{
+        /* background:#1c734a; */
+        grid-area: nav;
+        background-color: #505050;
+        width: 100%;
+        font-family: 'Source Serif Pro', serif;
+        font-size: 1vw;
+
+      }
+      nav a{
+        float: left;
+        border-right:1px solid #bbb;
+          display: block;
+          color: #c6c6c6;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 20px;
+          width: 6.5%;
+          font-weight: 600;
+
+      }
+      nav a:hover {
+        background-color: #777777;
+        color: #ffffff;
+      }
+      nav .search-container {
+        float: right;
+      }
+      nav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        font-family: 'Source Serif Pro', serif;
+      }
+      nav .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background: #ccc;
+      }
+      main{
+        /* background: #851d64; */
+        grid-area: main;
+        text-align: center;
+        font-family: 'Bevan', cursive;
+        font-size: 3vw;
+        /* padding-top: 20px; */
+        /* font-weight: 900; */
+
+        background: linear-gradient(270deg, #ff0000, #0100ff, #11ff00, #e7ff00, #b500ff, #ff00cd, #ffa600, #00ebff);
+         background-size: 1600% 1600%;
+
+         -webkit-background-clip:text;
+         background-clip: text;
+         color: transparent;
+
+         -webkit-animation: background 30s ease infinite;
+         -moz-animation: background 30s ease infinite;
+         animation: background 30s ease infinite;
+
+      }
+
+      #content1{
+        /* background: #252794; */
+        grid-area: content1;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+
+      }
+      #content2{
+        /* background: #912033; */
+        grid-area: content2;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content3{
+        /* background: #806424; */
+        grid-area: content3;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content4{
+        /* background: #e36b09; */
+        grid-area: content4;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content5{
+        /* background: #a6deff; */
+        grid-area: content5;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content6{
+        /* background: #636363; */
+        grid-area: content6;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content7{
+        /* background: #7816e0; */
+        grid-area: content7;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+
+      }
+      #content8{
+        /* background: #f5a9ed; */
+        grid-area: content8;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content9{
+        /* background: #668a69; */
+        grid-area: content9;
+        text-align: center;
+        font-family: horizon;
+        font-size: 2vw;
+      }
+      #content10{
+        /* background: #31364f; */
+        grid-area: content10;
+        text-align: center;
+        font-family: horizon;
+        font-size:2vw;
+      }
+      footer{
+        background: linear-gradient(270deg, #ff0000, #0100ff, #11ff00, #e7ff00, #b500ff, #ff00cd, #ffa600, #00ebff);
+         background-size: 1600% 1600%;
+
+         -webkit-animation: background 30s ease infinite;
+         -moz-animation: background 30s ease infinite;
+         animation: background 30s ease infinite;
+        grid-area: footer;
+        text-align: center;
+      }
+      .imagehead{
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .laptop{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .laptop:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .desktop{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .desktop:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .cpu{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .cpu:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .mobo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .mobo:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .ram{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .ram:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .case{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .case:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .ssd{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .ssd:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .gpu{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .gpu:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .psu{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .psu:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      .cooler{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .cooler:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+      .fa-facebook {
+        /* background: #3B5998; */
+        color: black;
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+
+      .fa-twitter {
+        /* background: #55ACEE; */
+        color: black;
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+      .fa-instagram {
+        /* background: #55ACEE; */
+        color: black;
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+      .fa-youtube {
+        /* background: #55ACEE; */
+        color: black;
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+
+      }
+
+
+
+      @media only screen and (max-width: 600px){
+        .container{
+          grid-template-columns: 1fr;
+          grid-template-rows: .8fr .3fr .5fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr .5fr;
+          grid-template-areas:
+          "head"
+          "nav"
+          "main"
+          "content1"
+          "content2"
+          "content3"
+          "content4"
+          "content5"
+          "content6"
+          "content7"
+          "content8"
+          "content9"
+          "content10"
+          "footer";
+        }
+        nav .search-container {
+          float: none;
+        }
+        nav a, nav input[type=text], nav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+          }
+          nav input[type=text] {
+            border: 1px solid #ccc;
+          }
+              }
+
+
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="head"><img src="images/micro-center-1.svg" class="imagehead"></div>
+      <nav>
+        <a href="">Refurbished</a>
+        <a href="">Clearance</a>
+        <a href="">Computers</a>
+        <a href="">Electronics</a>
+        <a href="">Repairs</a>
+        <a href="">Accessories</a>
+        <a href="">Gaming</a>
+        <a href="">Software</a>
+        <a href="">Networking</a>
+        <a href="">Stores</a>
+        <a href="">Help</a>
+        <div class="search-container">
+
+          <input type="text" placeholder="Search..." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+
+        </div>
+      </nav>
+      <main>Start Building Your Custom PC Now!</main>
+      <div id="content1"><img src="images/laptops.jpg" class="laptop">Laptops</div>
+      <div id="content2"><img src="images/desktops.jpg" class="desktop">Desktops</div>
+      <div id="content3"><img src="images/cpu.jpg" class="cpu">Processors</div>
+      <div id="content4"><img src="images/mobo.jpg" class="mobo">Motherboards</div>
+      <div id="content5"><img src="images/ram.jpg" class="ram">Memory</div>
+      <div id="content6"><img src="images/case.jpg" class="case">Cases</div>
+      <div id="content7"><img src="images/ssd.jpg" class="ssd">Storage</div>
+      <div id="content8"><img src="images/grapcard.jpg" class="gpu">Video Cards</div>
+      <div id="content9"><img src="images/psu.jpg" class="psu">Power Supplies</div>
+      <div id="content10"><img src="images/cooler.jpg" class="cooler">Air & Water Cooling</div>
+      <footer>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </footer>
+    </div>
+
+  </body>
+</html>
